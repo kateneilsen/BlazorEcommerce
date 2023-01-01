@@ -10,4 +10,9 @@ public class Product
     public string ImageUrl { get; set; } = string.Empty;
     [Column(TypeName = "decimal(18,2)")]
     public decimal Price { get; set; }
+    
+    //add a relationship to the category
+    public Category? Category { get; set; }
+    //foreign key 
+    public int CategoryId { get; set; }
 }
